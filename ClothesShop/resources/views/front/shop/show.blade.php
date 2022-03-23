@@ -218,7 +218,7 @@
                                 </div>
                             </div>
                             <ul class="pd-tags">
-                                <li><span>CATEGORIES</span>: {{$product->productCategory->name}}</li>
+                                <li><span>Danh Mục</span>: {{$product->productCategory->name}}</li>
                                 <li><span>TAGS</span>: {{$product->tag}}</li>
                             </ul>
                             <div class="pd-share">
