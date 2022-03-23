@@ -157,6 +157,9 @@
                         </div>
                         <div class="product-thumbs">
                             <div class="product-thumbs-track ps-slider owl-carousel">
+                            <div class="pt active" data-imgbigurl="front/img/products/{{$product->productImages[0]->path}}">
+                                    <img src="front/img/products/{{$product->productImages[0]->path}}" alt="">
+                                </div>
                                 @foreach($product->productImages as $productImage)
                                 <div class="pt active" data-imgbigurl="front/img/product-single/{{$productImage->path}}">
                                     <img src="front/img/product-single/{{$productImage->path}}" alt="">
