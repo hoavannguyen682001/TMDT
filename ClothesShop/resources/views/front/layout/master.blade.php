@@ -172,8 +172,8 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="index.html">Trang chủ</a></li>
-                        <li><a href="shop.html">Cửa hàng</a></li>
+                        <li class="{{(request()->segment(1) == '') ? 'active' : ''}}"><a href="./">Trang chủ</a></li>
+                        <li class="{{(request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="./shop">Cửa hàng</a></li>
                         <li><a href="">Danh mục</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="">Chăm sóc da </a></li>
@@ -181,13 +181,13 @@
                                 <li><a href="">Trang điểm</a></li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="">Pages</a>
+                        <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="./blog">Blog</a></li>
+                        <li ><a href="">Pages</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="blog-details.html">Thông tin trang web</a></li>
                                 <li><a href="shopping-cart.html">Giỏ hàng</a></li>
                                 <li><a href="check-out.html">Thanh toán</a></li>
-                                <li><a href="faq.html">Faq</a></li>
+                                <li class="{{(request()->segment(1) == 'faq') ? 'active' : ''}}"><a href="./faq">Faq</a></li>
                                 <li><a href="contact.html">Liên hệ</a></li>
                                 <li><a href="register.html">Đăng kí</a></Li>
                                 <li><a href="login.html">Đăng nhập</a></li>

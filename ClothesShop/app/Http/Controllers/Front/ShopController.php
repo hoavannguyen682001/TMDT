@@ -20,6 +20,13 @@ class ShopController extends Controller
         }
         $colors = array_unique(array_column($product->productDetails->toArray(),'color'));
         $size = array_unique(array_column($product->productDetails->toArray(),'size'));
-        return view('front.shop.show',compact('product','avg_rating','colors','size'));
+
+        $relatedProducts = Product::where('product_category_id', $product->product_category_id)
+            ->where('tag', $product->tag)
+            ->limit(4)
+            ->get();
+
+
+        return view('front.shop.show',compact('product','avg_rating','colors','size','relatedProducts'));
     }
 }

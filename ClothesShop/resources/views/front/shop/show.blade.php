@@ -330,52 +330,70 @@
                             </div>
                             <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                 <div class="customer-review-option">
-                                <h4>{{count($product->productComment)}} Comments</h4>
+                                    <h4>{{count($product->productComment)}} Comments</h4>
                                     <div class="comment-option">
                                         @foreach($product->productComment as $productComment)
-                                            <div class="co-item">
-                                                <div class="avatar-pic">
-                                                    <img src="front/img/product-single/{{$productComment->user->avatar}}" alt="">
-                                                </div>
-                                                <div class="avatar-text">
-                                                    <div class="at-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-0"></i>
-                                                    </div>
-                                                    <h5>{{$productComment->name}} <span>{{date('d,m,Y',strtotime($productComment->created_at))}}</span></h5>
-                                                    <div class="at-reply">{{$productComment->messages}}</div>
-                                                </div>
+                                        <div class="co-item">
+                                            <div class="avatar-pic">
+                                                <img src="front/img/product-single/{{$productComment->user->avatar}}" alt="">
                                             </div>
+                                            <div class="avatar-text">
+                                                <div class="at-rating">
+                                                    @for ($i = 1; $i <= 5; $i++) @if($i <=$avg_rating) <i class="fa fa-star"></i>
+                                                        @else
+                                                        <i class="fa fa-star-o"></i>
+                                                        @endif
+                                                        @endfor
+                                                </div>
+                                                <h5>{{$productComment->name}} <span>{{date('d,m,Y',strtotime($productComment->created_at))}}</span></h5>
+                                                <div class="at-reply">{{$productComment->messages}}</div>
+                                            </div>
+                                        </div>
                                         @endforeach
-                                    <div class="personal-rating">
-                                        <h6>Your Rating</n6>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                    </div>
-                                    <div class="leave-comment">
-                                        <h4>Đánh giá </h4>
-                                        <form action="" class="comment-form">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <input type="text" placeholder="Tên">
+                                        <div class="personal-rating">
+                                            <h6>Your Rating</n6>
+                                                <div class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" placeholder="Email">
+                                        </div>
+                                        <div class="leave-comment">
+                                            <h4>Đánh giá </h4>
+                                            <form action="" class="comment-form">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder="Tên">
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder="Email">
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <textarea placeholder="Lời nhắn"></textarea>
+
+                                                        <div class="personal-rating">
+                                                            <h6>Your Rating</h6>
+                                                            <div class="rate">
+                                                                <input type="radio" id="star5" name="rating" value="5" />
+                                                                <label for="star5" title="text">5 stars</label>
+                                                                <input type="radio" id="star4" name="rating" value="4" />
+                                                                <label for="star4" title="text">4 stars</label>
+                                                                <input type="radio" id="star3" name="rating" value="3" />
+                                                                <label for="star3" title="text">3 stars</label>
+                                                                <input type="radio" id="star2" name="rating" value="2" />
+                                                                <label for="star2" title="text">2 stars</label>
+                                                                <input type="radio" id="star1" name="rating" value="1" />
+                                                                <label for="star1" title="text">1 star</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <button type="submit" class="site-btn">Gửi lời nhắn</button>
+                                                    </div>
                                                 </div>
-                                                <div class="col-lg-12">
-                                                    <textarea placeholder="Lời nhắn"></textarea>
-                                                    <button type="submit" class="site-btn">Gửi lời nhắn</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -384,7 +402,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 <!-- Product Shop Section End -->
@@ -399,123 +416,43 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/products/product-1.jpg" alt="">
-                        <div class="sale pp-sale">Giảm giá</div>
-                        <div class="icon">
-                            <i class="icon_heart alt"></i>
+            @foreach($relatedProducts as $relatedProducts)
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="front/img/products/{{ $relatedProducts->productImages[0]->path }}" alt="">
+                            @if($relatedProducts->discount != null)
+                            <div class="sale">Sale</div>
+                            @endif
+                            <div class="icon">
+                                <i class="icon_heart alt"></i>
+                            </div>
+                            <ul>
+                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a>
+                                </li>
+                                <li class="quick-view"><a href="shop/product/{{ $relatedProducts->id }}">+ Xem nhanh</a></li>
+                                <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a>
-                            </li>
-                            <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                            <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="pi-text">
                         <div class="pi-text">
-                            <div class="catagory-name">Towel</div>
-                            <a href="#">
-                                <h5>Pure Pineapple</h5>
+                            <div class="category_name">{{ $relatedProducts->tag }}</div>
+                            <a href="shop/product/{{ $relatedProducts->id }}">
+                                <h5>{{$relatedProducts->name}}</h5>
                             </a>
                             <div class="product-price">
-                                $14.00
-                                <span>$35.00</span>
+                                @if($relatedProducts->discount != null)
+                                ${{ $relatedProducts->discount }}
+                                <span>${{ $relatedProducts->price }}</span>
+                                @else
+                                ${{ $relatedProducts->price }}
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/products/product-2.jpg" alt="">
-                        <div class="sale pp-sale">Giảm giá</div>
-                        <div class="icon">
-                            <i class="icon_heart alt"></i>
-                        </div>
-                        <ul>
-                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a>
-                            </li>
-                            <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                            <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="pi-text">
-                        <div class="pi-text">
-                            <div class="catagory-name">Towel</div>
-                            <a href="#">
-                                <h5>Pure Pineapple</h5>
-                            </a>
-                            <div class="product-price">
-                                $14.00
-                                <span>$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/products/product-3.jpg" alt="">
-                        <div class="sale pp-sale">Giảm giá</div>
-                        <div class="icon">
-                            <i class="icon_heart alt"></i>
-                        </div>
-                        <ul>
-                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a>
-                            </li>
-                            <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                            <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="pi-text">
-                        <div class="pi-text">
-                            <div class="catagory-name">Towel</div>
-                            <a href="#">
-                                <h5>Pure Pineapple</h5>
-                            </a>
-                            <div class="product-price">
-                                $14.00
-                                <span>$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/products/product-4.jpg" alt="">
-                        <div class="sale pp-sale">Giảm giá</div>
-                        <div class="icon">
-                            <i class="icon_heart alt"></i>
-                        </div>
-                        <ul>
-                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a>
-                            </li>
-                            <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                            <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="pi-text">
-                        <div class="pi-text">
-                            <div class="catagory-name">Towel</div>
-                            <a href="#">
-                                <h5>Pure Pineapple</h5>
-                            </a>
-                            <div class="product-price">
-                                $14.00
-                                <span>$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
