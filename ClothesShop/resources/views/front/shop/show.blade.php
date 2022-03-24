@@ -174,7 +174,7 @@
                                 <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                             </div>
                             <div class="pd-rating">
-                                @for($i = 1; $i <= 5; $i++) @if($i < $avg_rating) <i class="fa fa-star"></i>
+                                @for($i = 1; $i <= 5; $i++) @if($i <= $avg_rating) <i class="fa fa-star"></i>
                                     @else
                                     <i class="fa fa-star-o"></i>
                                     @endif
@@ -185,9 +185,9 @@
                             <div class="pd-desc">
                                 <p>{{$product->content}}</p>
                                 @if($product->discount != null)
-                                <h4>{{$product->discount}} <span>{{$product->price}}</span></h4>
+                                <h4>${{$product->discount}} <span>${{$product->price}}</span></h4>
                                 @else
-                                <h4>{{$product->price}}</h4>
+                                <h4>${{$product->price}}</h4>
                                 @endif
 
                             </div>
@@ -299,7 +299,7 @@
                                         <tr>
                                             <td class="p-catagory">Cân nặng</td>
                                             <td>
-                                                <div class="p-weight">{{$product->weight}}kg</div>
+                                                <div class="p-weight">{{$product->weight}}g</div>
                                             </td>
                                         </tr>
                                         <tr>

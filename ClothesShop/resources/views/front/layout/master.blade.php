@@ -55,10 +55,9 @@
                     <a href="./login" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                            <option value='yt' data-image="front/img/flag-1.jpg" data-imagecss="flag yt" data-title="VietNam">
-                                Việt Nam</option>
-                            <option value='yu' data-image="front/img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">Đức</option>
+                            <option value='yt' data-image="front/img/flag-1.jpg" data-imagecss="flag yt" data-title="VietNam">Việt Nam</option>
+                            <!-- <option value='yu' data-image="front/img/flag-2.jpg" data-imagecss="flag yu"
+                                data-title="Bangladesh">Đức</option> -->
                         </select>
                     </div>
                     <div class="top-social">
@@ -188,7 +187,7 @@
                         </li>
                         <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="./blog">Blog</a></li>
                         <li class="{{(request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="./contact">Liên hệ</a></li>
-                        <li ><a href="">Pages</a>
+                        <li ><a href="">Chung</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="blog-details.html">Thông tin trang web</a></li>
                                 <li><a href="./shop/cart">Giỏ hàng</a></li>

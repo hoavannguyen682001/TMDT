@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <span>Bag, kids</span>
+                        <span>Chăm sóc da và trang điểm</span>
                         <h1>Black friday</h1>
                         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis, quos ullam ad omnis esse quam necessitatibus voluptatibus quaerat fugiat?</P>
                         <a href="#" class="primary-btn">Shop Now</a>
@@ -116,110 +116,114 @@
                             </a>
                             <div class="product-price">
                                 @if($product2->discount != null)
-                                    ${{ $product2->discount }}
-                                    <span>${{ $product2->price }}</span>
+                                ${{ $product2->discount }}
+                                <span>${{ $product2->price }}</span>
                                 @else
-                                    ${{ $product2->price }}
+                                ${{ $product2->price }}
                                 @endif
-                                </div>
                             </div>
                         </div>
-                        @endforeach
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Women Banner Section End -->
+    </div>
+</section>
+<!-- Women Banner Section End -->
 
-    <!-- Deal Of The Week Section Begin-->
-    <section class="deal-of-week set-bg spad" data-setbg="front/img/time-bg.jpg">
-        <div class="container">
-            <div class="col-1g-6 text-center">
-                <div class="section-title">
-                    <h2>Giảm giá cuối tuần</h2>
-                    <p>Loren ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> consectetur adipisicing elit </p>
-                    <div class="product-price">
-                        $35.00
-                        <span>/ HanBag</span>
-                        <ATP />
-                    </div>
-                    <div class="countdown-timer" id="countdown">
-                        <div class="cd-item">
-                            <span>56</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>12</span>
-                            <p>Hrs</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>48</span>
-                            <p>Mins</p>
-                        </div>
-                        |
-                        <div class="cd-item"> %3
-                            <span>52</span>
-                            <p>Secs</p>
-                        </div>
-                    </div>
-                    <a href="" class="primary-btn">Mua ngay</a>
+<!-- Deal Of The Week Section Begin-->
+<section class="deal-of-week set-bg spad" data-setbg="front/img/time-bg.jpg">
+    <div class="container">
+        <div class="col-1g-6 text-center">
+            <div class="section-title">
+                <h2>Giảm giá cuối tuần</h2>
+                <p>Loren ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> consectetur adipisicing elit </p>
+                <div class="product-price">
+                    $35.00
+                    <span>/ HanBag</span>
+                    <ATP />
                 </div>
-            </div>
-    </section>
-    <!-- Deal Of The Week Section End-->
-
-    <!-- Man Banner Section Begin-->
-    <section class="product1-banner spad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="filter-control">
-                        <ul>
-                            <li class="item active" data-tag="*" data-category="women">Tất cả</li>
-                            <li class="item" data-tag=".Son môi" data-category="women">Son môi</li>
-                            <li class="item" data-tag=".Sửa rửa mặt" data-category="women">Sửa rửa mặt</li>
-                            <li class="item" data-tag=".Serum" data-category="women">Serum</li>
-                            <li class="item" data-tag=".Kẻ mắt" data-category="women">Kẻ mắt</li>
-                        </ul>
+                <div class="countdown-timer" id="countdown">
+                    <div class="cd-item">
+                        <span>56</span>
+                        <p>Days</p>
                     </div>
-                    <div class="product-slider owl-carousel product1">
-                        @foreach($product1 as $product1)
-                        <div class="product-item item {{$product1->tag}}">
-                                <div class="pi-pic">
-                                    <img src="front/img/products/{{$product1->productImages[0]->path}}" alt="">
-                                    <div class="sale">Giảm giá</div>
-                                    <div class="icon">
-                                        <i class="icon_heart alt"></i>
-                                    </div>
-                                    <ul>
-                                        <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                        <li class="quick-view"><a href="./shop/product/{{$product1->id}}">+ Xem nhanh</a></li>
-                                        <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="pi-text">
-                                    <div class="catagory-name">Coat</div>
-                                    <a href="">
-                                        <h5>Pure Pineapple</h5>
-                                    </a>
-                                    <div class="product-price">
-                                        $14.80
-                                        <span>$35.08</span>
-                                    </div>
-                                </div>
+                    <div class="cd-item">
+                        <span>12</span>
+                        <p>Hrs</p>
+                    </div>
+                    <div class="cd-item">
+                        <span>48</span>
+                        <p>Mins</p>
+                    </div>
+                    |
+                    <div class="cd-item"> %3
+                        <span>52</span>
+                        <p>Secs</p>
+                    </div>
+                </div>
+                <a href="" class="primary-btn">Mua ngay</a>
+            </div>
+        </div>
+</section>
+<!-- Deal Of The Week Section End-->
+
+<!-- Man Banner Section Begin-->
+<section class="product1-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="filter-control">
+                    <ul>
+                        <li class="item active" data-tag="*" data-category="women">Tất cả</li>
+                        <li class="item" data-tag=".Son môi" data-category="women">Son môi</li>
+                        <li class="item" data-tag=".Sửa rửa mặt" data-category="women">Sửa rửa mặt</li>
+                        <li class="item" data-tag=".Serum" data-category="women">Serum</li>
+                        <li class="item" data-tag=".Kẻ mắt" data-category="women">Kẻ mắt</li>
+                    </ul>
+                </div>
+                <div class="product-slider owl-carousel product1">
+                    @foreach($product1 as $product1)
+                    <div class="product-item item {{$product1->tag}}">
+                        <div class="pi-pic">
+                            <img src="front/img/products/{{$product1->productImages[0]->path}}" alt="">
+                            <div class="sale">Giảm giá</div>
+                            <div class="icon">
+                                <i class="icon_heart alt"></i>
                             </div>
-                            @endforeach
+                            <ul>
+                                <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
+                                <li class="quick-view"><a href="./shop/product/{{$product1->id}}">+ Xem nhanh</a></li>
+                                <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="pi-text">
+                            <div class="catagory-name">{{$product1->tag}}</div>
+                            <a href="">
+                                <h5>{{$product1->name}}</h5>
+                            </a>
+                            <div class="product-price">
+                                @if($product2->discount != null)
+                                ${{ $product2->discount }}
+                                <span>${{ $product2->price }}</span>
+                                @else
+                                ${{ $product2->price }}
+                                @endif
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="product-large set-bg" data-setbg="front/img/products/man-large.jpg">
-                            <h2>Trang điểm</h2>
-                            <a href="#">Xem thêm</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
+            <div class="col-lg-3 offset-lg-1">
+                <div class="product-large set-bg" data-setbg="front/img/products/man-large.jpg">
+                    <h2>Trang điểm</h2>
+                    <a href="#">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Han Banner Section End -->
 
