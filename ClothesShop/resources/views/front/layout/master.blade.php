@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="front/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="front/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="front/css/style.css" type="text/css">
+
+    <script src="front/js/owLcarousel2-filter.min.js"></script>
+
 </head>
 
 <body>
@@ -182,13 +185,14 @@
                             </ul>
                         </li>
                         <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="./blog">Blog</a></li>
+                        <li class="{{(request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="./contact">Liên hệ</a></li>
                         <li ><a href="">Pages</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="blog-details.html">Thông tin trang web</a></li>
                                 <li><a href="shopping-cart.html">Giỏ hàng</a></li>
                                 <li><a href="check-out.html">Thanh toán</a></li>
                                 <li class="{{(request()->segment(1) == 'faq') ? 'active' : ''}}"><a href="./faq">Faq</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+                                
                                 <li><a href="register.html">Đăng kí</a></Li>
                                 <li><a href="login.html">Đăng nhập</a></li>
                             </ul>

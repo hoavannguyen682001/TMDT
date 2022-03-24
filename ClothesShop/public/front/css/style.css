@@ -1047,10 +1047,10 @@ ol {
 
 
 /*---------------------
-  Women Banner Section
+  Product2 Banner Section
 -----------------------*/
 
-.women-banner {
+.product2-banner {
     padding-right: 65px;
     padding-left: 65px;
     padding-top: 0;
@@ -1332,10 +1332,10 @@ ol {
 
 
 /*---------------------
-  Man Banner
+  Product1 Banner
 -----------------------*/
 
-.man-banner {
+.product1-banner {
     padding-right: 65px;
     padding-left: 65px;
     padding-top: 80px;
@@ -3936,9 +3936,9 @@ ol {
     .product-item .pi-pic ul li a {
         padding: 16px 12px 12px 11px;
     }
-    .nav-item .nav-menu li a {
+    /* .nav-item .nav-menu li a {
         padding: 16px 45px 15px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1200px) {
@@ -3993,7 +3993,7 @@ ol {
     .single-banner {
         margin-bottom: 30px;
     }
-    .women-banner {
+    .product1-banner {
         padding-right: 0;
         padding-left: 0;
     }
@@ -4008,7 +4008,7 @@ ol {
     .product-slider .owl-nav button[type=button] {
         display: none;
     }
-    .man-banner {
+    .product2-banner {
         padding-right: 0;
         padding-left: 0;
     }

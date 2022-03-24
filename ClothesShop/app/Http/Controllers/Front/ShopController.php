@@ -22,11 +22,15 @@ class ShopController extends Controller
         $size = array_unique(array_column($product->productDetails->toArray(),'size'));
 
         $relatedProducts = Product::where('product_category_id', $product->product_category_id)
-            ->where('tag', $product->tag)
+            // ->where('tag', $product->tag)
             ->limit(4)
             ->get();
 
 
         return view('front.shop.show',compact('product','avg_rating','colors','size','relatedProducts'));
+    }
+
+    public function index(){
+        return view('front.shop.index');
     }
 }

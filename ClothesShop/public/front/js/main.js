@@ -56,7 +56,7 @@
         Product Slider
     --------------------*/
    $(".product-slider").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 25,
         nav: true,
         items: 4,
@@ -247,4 +247,34 @@
 		$button.parent().find('input').val(newVal);
 	});
 
+    /*-------------------
+		Product Filter - Index
+	--------------------- */
+    const product1 = $('.product-slider.prouct1');
+
+    const product2 = $('.product-slider.product2');
+
+    $('.filter-control').on('click', '.item', function () {
+        const $item = $(this); 
+
+        const filter = $item.data('tag');
+        const category = $item.data('category');
+
+        $item.siblings().removeClass('active');
+        $item.addClass('active');
+
+        if(category =='product1'){
+            product1.owlCarousel2_filter(filter);
+
+        }
+        if(category =='product2'){
+            product2.owlCarousel2_filter(filter);
+            
+        }
+        
+    })
+
+
+
 })(jQuery);
+

@@ -4,192 +4,127 @@
 @section('title','Trang Chủ')
 @section('body')
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="front/img/hero-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>Chăm sóc da và trang điểm</span>
-                            <h1>Black friday</h1>
-                            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis, quos ullam ad omnis esse quam necessitatibus voluptatibus quaerat fugiat?</P>
-                            <a href="#" class="primary-btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>58%</span></h2>
+<!-- Hero Section Begin -->
+<section class="hero-section">
+    <div class="hero-items owl-carousel">
+        <div class="single-hero-items set-bg" data-setbg="front/img/hero-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <span>Chăm sóc da và trang điểm</span>
+                        <h1>Black friday</h1>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis, quos ullam ad omnis esse quam necessitatibus voluptatibus quaerat fugiat?</P>
+                        <a href="#" class="primary-btn">Shop Now</a>
                     </div>
                 </div>
-            </div>
-            <div class="single-hero-items set-bg" data-setbg="front/img/hero-2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>Bag, kids</span>
-                            <h1>Black friday</h1>
-                            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis, quos ullam ad omnis esse quam necessitatibus voluptatibus quaerat fugiat?</P>
-                            <a href="#" class="primary-btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>58%</span></h2>
-                    </div>
+                <div class="off-card">
+                    <h2>Sale <span>58%</span></h2>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Hero Section End -->
+        <div class="single-hero-items set-bg" data-setbg="front/img/hero-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <span>Bag, kids</span>
+                        <h1>Black friday</h1>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis, quos ullam ad omnis esse quam necessitatibus voluptatibus quaerat fugiat?</P>
+                        <a href="#" class="primary-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>58%</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
 
-    <!-- Banner Section Begin -->
-    <div class="banner-section spad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="front/img/banner-1.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Chăm sóc da</h4>
-                        </div>
+<!-- Banner Section Begin -->
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="front/img/banner-1.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Chăm sóc da</h4>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="front/img/banner-2.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Serum và sản phẩm đặc trị</h4>
-                        </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="front/img/banner-2.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Serum và sản phẩm đặc trị</h4>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="front/img/banner-3.jpg" alt="">
-                        <div class="inner-text">
-                            <h4>Trang điểm</h4>
-                        </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="front/img/banner-3.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Trang điểm</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Banner Section End -->
+</div>
+<!-- Banner Section End -->
 
-    <!-- Women Banner Section Begin -->
-    <section class="women-banner spad">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="product-large set-bg" data-setbg="front/img/products/women-large.jpg">
-                        <h2>Serum và sản phẩm đặc trị</h2>
-                        <a href="#">Xem thêm</a>
-                    </div>
+<!-- Women Banner Section Begin -->
+<section class="product2-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="product-large set-bg" data-setbg="front/img/products/women-large.jpg">
+                    <h2>Serum và sản phẩm đặc trị</h2>
+                    <a href="#">Xem thêm</a>
                 </div>
-                <div class="col-lg-8 offset-lg-1">
-                    <div class="filter-control">
-                        <ul>
-                            <li class="active">Son môi</li>
-                            <li>Sửa rửa mặt</li>
-                            <li>Serum</li>
-                            <li>Kẻ mắt</li>
-                        </ul>
-                    </div>
-                    <div class="product-slider owl-carousel">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/women-1.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
+            </div>
+            <div class="col-lg-8 offset-lg-1">
+                <div class="filter-control">
+                    <ul>
+                        <li class="item active" data-tag="*" data-category="product2">Tất cả</li>
+                        <li class="item" data-tag=".Son môi" data-category="product2">Son môi</li>
+                        <li class="item" data-tag=".Sửa rửa mặt" data-category="product2">Sửa rửa mặt</li>
+                        <li class="item" data-tag=".Serum" data-category="product2">Serum</li>
+                        <li class="item" data-tag=".Kẻ mắt" data-category="product2">Kẻ mắt</li>
+                    </ul>
+                </div>
+                <div class="product-slider owl-carousel product1">
+                    @foreach($product2 as $product2)
+                    <div class="product-item item {{$product2->tag}}">
+                        <div class="pi-pic">
+                            <img src="front/img/products/{{$product2->productImages[0]->path}}" alt="">
+                            <div class="sale">Giảm giá</div>
+                            <div class="icon">
+                                <i class="icon_heart alt"></i>
                             </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
+                            <ul>
+                                <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
+                                <li class="quick-view"><a href="./shop/show.blade.php">+ Xem nhanh</a></li>
+                                <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="pi-text">
+                            <div class="catagory-name">{{$product2->tag}}</div>
+                            <a href="">
+                                <h5>{{$product2->name}}</h5>
+                            </a>
+                            <div class="product-price">
+                                @if($product2->discount != null)
+                                    ${{ $product2->discount }}
+                                    <span>${{ $product2->price }}</span>
+                                @else
+                                    ${{ $product2->price }}
+                                @endif
                                 </div>
                             </div>
                         </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/women-2.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/women-3.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/women-4.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -235,280 +170,211 @@
     <!-- Deal Of The Week Section End-->
 
     <!-- Man Banner Section Begin-->
-    <section class="man-banner spad">
+    <section class="product1-banner spad">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="filter-control">
                         <ul>
-                            <li class="active">Son môi</li>
-                            <li>Sửa rửa mặt</li>
-                            <li>Serum</li>
-                            <li>Kẻ mắt</li>
+                            <li class="item active" data-tag="*" data-category="women">Tất cả</li>
+                            <li class="item" data-tag=".Son môi" data-category="women">Son môi</li>
+                            <li class="item" data-tag=".Sửa rửa mặt" data-category="women">Sửa rửa mặt</li>
+                            <li class="item" data-tag=".Serum" data-category="women">Serum</li>
+                            <li class="item" data-tag=".Kẻ mắt" data-category="women">Kẻ mắt</li>
                         </ul>
                     </div>
-                    <div class="product-slider owl-carousel">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/man-1.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
+                    <div class="product-slider owl-carousel product1">
+                        @foreach($product1 as $product1)
+                        <div class="product-item item {{$product1->tag}}">
+                                <div class="pi-pic">
+                                    <img src="front/img/products/{{$product1->productImages[0]->path}}" alt="">
+                                    <div class="sale">Giảm giá</div>
+                                    <div class="icon">
+                                        <i class="icon_heart alt"></i>
+                                    </div>
+                                    <ul>
+                                        <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
+                                        <li class="quick-view"><a href="./shop/show.blade.php">+ Xem nhanh</a></li>
+                                        <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
+                                    </ul>
                                 </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/man-2.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
+                                <div class="pi-text">
+                                    <div class="catagory-name">Coat</div>
+                                    <a href="">
+                                        <h5>Pure Pineapple</h5>
+                                    </a>
+                                    <div class="product-price">
+                                        $14.80
+                                        <span>$35.08</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/man-3.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="front/img/products/man-4.jpg" alt="">
-                                <div class="sale">Giảm giá</div>
-                                <div class="icon">
-                                    <i class="icon_heart alt"></i>
-                                </div>
-                                <ul>
-                                    <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="product.html">+ Xem nhanh</a></li>
-                                    <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.80
-                                    <span>$35.08</span>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1">
-                    <div class="product-large set-bg" data-setbg="front/img/products/man-large.jpg">
-                        <h2>Trang điểm</h2>
-                        <a href="#">Xem thêm</a>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="product-large set-bg" data-setbg="front/img/products/man-large.jpg">
+                            <h2>Trang điểm</h2>
+                            <a href="#">Xem thêm</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Han Banner Section End -->
+</section>
+<!-- Han Banner Section End -->
 
-    <!-- Instagram Section Begin -->
-    <div class="instagram-photo">
-        <div class="insta-item set-bg" data-setbg="front/img/insta-1.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
+<!-- Instagram Section Begin -->
+<div class="instagram-photo">
+    <div class="insta-item set-bg" data-setbg="front/img/insta-1.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="front/img/insta-2.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="front/img/insta-3.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="front/img/insta-4.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="front/img/insta-5.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="front/img/insta-6.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">CodeLean_Collection</a></h5>
+        </div>
+    </div>
+</div>
+<!-- Instagram Section End -->
+
+<!-- Latest Blog Section Begin -->
+<section class="latest-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Tin tức</h2>
+                </div>
             </div>
         </div>
-        <div class="insta-item set-bg" data-setbg="front/img/insta-2.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="front/img/latest-1.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i> May 4, 2822
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i> 5
+                            </div>
+                        </div>
+                        <a href="">
+                            <h4>The Best Street Style From London codeleanon Week</h4>
+                        </a>
+                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="front/img/latest-2.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i> May 4, 2822
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i> 5
+                            </div>
+                        </div>
+                        <a href="">
+                            <h4>Vogue's Ultimate Guide To Autumn/Winter 2022 Shoes</h4>
+                        </a>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quia?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="front/img/latest-3.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i> May 4, 2822
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i> 5
+                            </div>
+                        </div>
+                        <a href="">
+                            <h4>How To Brighten Your Wardrobe With A Dash Of Lime
+                            </h4>
+                        </a>
+                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="insta-item set-bg" data-setbg="front/img/insta-3.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="front/img/insta-4.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="front/img/insta-5.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
-            </div>
-        </div>
-        <div class="insta-item set-bg" data-setbg="front/img/insta-6.jpg">
-            <div class="inside-text">
-                <i class="ti-instagram"></i>
-                <h5><a href="#">CodeLean_Collection</a></h5>
+        <div class="benefit-items">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="front/img/icon-1.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Miễn phí vận chuyển</h6>
+                            <p>Cho hóa đơn từ $99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="front/img/icon-2.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Giao hàng đúng hẹn</h6>
+                            <p>Giải quyết nhanh nếu có vấn đề</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="front/img/icon-3.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Thanh toán an toàn</h6>
+                            <p>Độ tin cậy 100%</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Instagram Section End -->
-
-    <!-- Latest Blog Section Begin -->
-    <section class="latest-blog spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Tin tức</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="front/img/latest-1.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i> May 4, 2822
-                                </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i> 5
-                                </div>
-                            </div>
-                            <a href="">
-                                <h4>The Best Street Style From London codeleanon Week</h4>
-                            </a>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="front/img/latest-2.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i> May 4, 2822
-                                </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i> 5
-                                </div>
-                            </div>
-                            <a href="">
-                                <h4>Vogue's Ultimate Guide To Autumn/Winter 2022 Shoes</h4>
-                            </a>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quia?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="front/img/latest-3.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i> May 4, 2822
-                                </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i> 5
-                                </div>
-                            </div>
-                            <a href="">
-                                <h4>How To Brighten Your Wardrobe With A Dash Of Lime
-                                </h4>
-                            </a>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="benefit-items">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single-benefit">
-                            <div class="sb-icon">
-                                <img src="front/img/icon-1.png" alt="">
-                            </div>
-                            <div class="sb-text">
-                                <h6>Miễn phí vận chuyển</h6>
-                                <p>Cho hóa đơn từ $99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-benefit">
-                            <div class="sb-icon">
-                                <img src="front/img/icon-2.png" alt="">
-                            </div>
-                            <div class="sb-text">
-                                <h6>Giao hàng đúng hẹn</h6>
-                                <p>Giải quyết nhanh nếu có vấn đề</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-benefit">
-                            <div class="sb-icon">
-                                <img src="front/img/icon-3.png" alt="">
-                            </div>
-                            <div class="sb-text">
-                                <h6>Thanh toán an toàn</h6>
-                                <p>Độ tin cậy 100%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Latest Blog Section End -->
+</section>
+<!-- Latest Blog Section End -->
 @endsection

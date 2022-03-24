@@ -10,10 +10,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $menProducts = Product::where('featured', true)->where('product_category_id', 1)->get();
-        $womenProducts = Product::where('featured', true)->where('product_category_id', 2)->get();
+        $product1 = Product::where('featured', true)->where('product_category_id', 1)->get();
+        $product2 = Product::where('featured', true)->where('product_category_id', 2)->get();
 
         $blogs = Blog::orderby('id', 'desc')->limit(3)->get();
-        return view('front.index', compact('menProducts','womenProducts', 'blogs'));
+        return view('front.index', compact('product1','product2', 'blogs'));
     }
 }

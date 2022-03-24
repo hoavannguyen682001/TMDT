@@ -1,6 +1,6 @@
 @extends('front.layout.master')
 
-@section('title','Sản phẩm')
+@section('title','Chi Tiết Sản phẩm')
 
 @section('body')
 
@@ -157,9 +157,7 @@
                         </div>
                         <div class="product-thumbs">
                             <div class="product-thumbs-track ps-slider owl-carousel">
-                            <div class="pt active" data-imgbigurl="front/img/products/{{$product->productImages[0]->path}}">
-                                    <img src="front/img/products/{{$product->productImages[0]->path}}" alt="">
-                                </div>
+
                                 @foreach($product->productImages as $productImage)
                                 <div class="pt active" data-imgbigurl="front/img/product-single/{{$productImage->path}}">
                                     <img src="front/img/product-single/{{$productImage->path}}" alt="">
@@ -222,7 +220,7 @@
                             </div>
                             <ul class="pd-tags">
                                 <li><span>Danh Mục</span>: {{$product->productCategory->name}}</li>
-                                <li><span>TAGS</span>: {{$product->tag}}</li>
+                                <li><span>THẺ</span>: {{$product->tag}}</li>
                             </ul>
                             <div class="pd-share">
                                 <div class="p-code">Sku : {{$product->sku}}</div>
@@ -365,7 +363,10 @@
                                         </div>
                                         <div class="leave-comment">
                                             <h4>Đánh giá </h4>
-                                            <form action="" class="comment-form">
+                                            <form action="" method="POST" class="comment-form">
+                                            @csrf
+                                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                                <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id ?? null }}">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <input type="text" placeholder="Tên">
