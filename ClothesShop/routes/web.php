@@ -20,7 +20,11 @@ Route::prefix('shop')->group(function(){
     Route::get('/product/{id}',[Front\ShopController::class,'show']);
 
     Route::get('/',[Front\ShopController::class,'index']);
+    Route::get('/cart',[Front\CartController::class,'cart']);
 });
 
 Route::get('/blog',[Front\BlogController::class,'index']);
 Route::get('/blog/blogdetail/{id}',[Front\BlogController::class,'blogdetail']);
+Route::get('/contact',[Front\ContactController::class,'contact']);
+Route::get('/login',[Front\LoginController::class,'login']);
+Route::get('/checkout/index',[Front\CheckOutController::class,'index']);

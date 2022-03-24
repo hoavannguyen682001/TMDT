@@ -274,6 +274,7 @@ Kem dưỡng trắng da Eveline Extra Soft Whitening là sản phẩm nổi ti�
                 'sku' => '00123',
                 'featured' => true,
                 'tag' => 'Chăm sóc da',
+                
             ],
         ]);
 

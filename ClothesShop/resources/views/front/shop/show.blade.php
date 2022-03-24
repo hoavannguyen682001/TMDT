@@ -238,7 +238,7 @@
                         <ul class="nav" role="tablist">
                             <li><a class="active" href="#tab-1" data-toggle="tab" role="tab">MÔ TẢ SẢN PHẨM</a></li>
                             <li><a href="#tab-2" data-toggle="tab" role="tab">THÔNG TIN CHUNG </a></li>
-                            <li><a href="#tab-3" data-toggle="tab" role="tab">ĐÁNH GIÁ (02)</a></li>
+                            <li><a href="#tab-3" data-toggle="tab" role="tab">ĐÁNH GIÁ</a></li>
                         </ul>
                     </div>
                     <div class="tab-item-content">

@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="front/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="front/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="front/css/themify-icons.css" type="text/css">
@@ -50,7 +52,7 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="login.html" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
+                    <a href="./login" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
                             <option value='yt' data-image="front/img/flag-1.jpg" data-imagecss="flag yt" data-title="VietNam">
@@ -101,7 +103,7 @@
                                 </a>
                             </li>
                             <li class="cart-icon">
-                                <a href="#">
+                                <a href="./shop/cart">
                                     <i class="icon_bag_alt"></i>
                                     <span>3</span>
                                 </a>
@@ -141,8 +143,8 @@
                                         <h5>$120.88</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="shopping-cart.html" class="primary-btn view-card">Xem giỏ hàng</a>
-                                        <a href="check-out.html" class="primary-btn checkout-btn">Thanh toán</a>
+                                        <a href="./shop/cart" class="primary-btn view-card">Xem giỏ hàng</a>
+                                        <a href="./checkout/index" class="primary-btn checkout-btn">Thanh toán</a>
                                     </div>
                                 </div>
                             </li>
@@ -189,12 +191,12 @@
                         <li ><a href="">Pages</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="blog-details.html">Thông tin trang web</a></li>
-                                <li><a href="shopping-cart.html">Giỏ hàng</a></li>
-                                <li><a href="check-out.html">Thanh toán</a></li>
+                                <li><a href="./shop/cart">Giỏ hàng</a></li>
+                                <li><a href="./checkout/index">Thanh toán</a></li>
                                 <li class="{{(request()->segment(1) == 'faq') ? 'active' : ''}}"><a href="./faq">Faq</a></li>
                                 
                                 <li><a href="register.html">Đăng kí</a></Li>
-                                <li><a href="login.html">Đăng nhập</a></li>
+                                <li><a href="./login">Đăng nhập</a></li>
                             </ul>
                         </li>
                     </ul>
