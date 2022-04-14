@@ -197,7 +197,7 @@
                                     @foreach($colors as $productColor)
                                     <div class="cc-item">
                                         <input type="radio" id="cc-{{$productColor}}">
-                                        <label for="cc-{{$productColor}}" class="cc-{{$productColor}}"></label>
+                                        <label for="cc-{{ $productColor }}" class="cc-{{ $productColor }}"></label>
                                     </div>
                                     @endforeach
                                 </div>

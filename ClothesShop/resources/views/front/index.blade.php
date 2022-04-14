@@ -42,7 +42,7 @@
 <!-- Hero Section End -->
 
 <!-- Banner Section Begin -->
-<div class="banner-section spad">
+<!-- <div class="banner-section spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Banner Section End -->
 
 <!-- Women Banner Section Begin -->

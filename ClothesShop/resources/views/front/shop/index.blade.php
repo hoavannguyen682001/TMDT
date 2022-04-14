@@ -148,14 +148,23 @@
                 <div class="product-show-option">
                     <div class="row">
                         <div class="col-lg-7 col-nd-7">
-                            <div class="select-option">
-                                <select class="sorting">
-                                    <option value="">Phân loại</option>
-                                </select>
-                                <select class="p-show">
-                                    <option value="">Hiển thị:</option>
-                                </select>
-                            </div>
+                            <form action="">
+                                <div class="select-option">
+                                    <select name="sort_by" class="sorting" onchange="this.form.submit();">
+                                        <option {{ request('sort_by') == 'latest' ? 'selected' : ''}} value="latest">Sắp xếp: Mới nhất</option>
+                                        <option {{ request('sort_by') == 'oldest' ? 'selected' : ''}} value="oldest">Sắp xếp: Cũ nhất</option>
+                                        <option {{ request('sort_by') == 'name-ascending' ? 'selected' : ''}} value="name-ascending">Sắp xếp: Tên A-Z</option>
+                                        <option {{ request('sort_by') == 'name-descending' ? 'selected' : ''}} value="name-descending">Sắp xếp: Tên Z-A</option>
+                                        <option {{ request('sort_by') == 'price-ascending' ? 'selected' : ''}} value="price-ascending">Sắp xếp: Giá Tăng Dần</option>
+                                        <option {{ request('sort_by') == 'price-descending' ? 'selected' : ''}} value="price-descending">Sắp xếp: Giá Giảm Dần</option>
+                                    </select>
+                                    <select name="show" class="p-show" onchange="this.form.submit();">
+                                        <option {{ request('show') == '3' ? 'selected' : '' }} value="3">Hiển thị: 3</option>
+                                        <option {{ request('show') == '6' ? 'selected' : '' }} value="6">Hiển thị: 6</option>
+                                        <option {{ request('show') == '9' ? 'selected' : '' }} value="9">Hiển thị: 9</option>
+                                    </select>
+                                </div>
+                            </form>
                         </div>
                         <div class="col-lg-5 col-nd-5 text-right">
                             <p>Hiển thị 01- 09 của 36 sản phẩm</p>

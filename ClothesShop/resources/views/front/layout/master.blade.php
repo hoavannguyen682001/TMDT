@@ -187,7 +187,7 @@
                         </li>
                         <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="./blog">Blog</a></li>
                         <li class="{{(request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="./contact">Liên hệ</a></li>
-                        <li ><a href="">Chung</a>
+                        <!-- <li ><a href="">Chung</a>
                             <ul class="dropdown">
                                 <li class="active"><a href="blog-details.html">Thông tin trang web</a></li>
                                 <li><a href="./shop/cart">Giỏ hàng</a></li>
@@ -197,7 +197,7 @@
                                 <li><a href="register.html">Đăng kí</a></Li>
                                 <li><a href="./login">Đăng nhập</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
