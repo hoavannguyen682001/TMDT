@@ -32,32 +32,33 @@ class ShopController extends Controller
 
     public function index(Request $request){
 
-        
-
         $perPage = $request->show ?? 3;
         $sortBy = $request->sort_by ?? 'latest';
+        $search = $request->search ?? '';
+
+        $products = Product::where('name','like','%' . $search . '%');
 
         switch ($sortBy) {
             case 'latest':
-                $products = Product::orderBy('id');
+                $products = $products->orderBy('id');
                 break;
             case 'oldest':
-                $products = Product::orderByDesc('id');
+                $products = $products->orderByDesc('id');
                 break;
             case 'name-ascending':
-                $products = Product::orderBy('name');
+                $products = $products->orderBy('name');
                 break;
             case 'name-descending':
-                $products = Product::orderByDesc('name');
+                $products = $products->orderByDesc('name');
                 break;
             case 'price-ascending':
-                $products = Product::orderBy('price'); 
+                $products = $products->orderBy('price'); 
                 break;
             case 'price-descending':
-                $products = Product::orderByDesc('price');
+                $products = $products->orderByDesc('price');
                 break;
             default:
-                $products = Product::orderBy('id');
+                $products = $products->orderBy('id');
             }
 
             $products = $products->paginate($perPage);

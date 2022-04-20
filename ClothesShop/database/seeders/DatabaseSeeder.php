@@ -276,6 +276,53 @@ Kem dưỡng trắng da Eveline Extra Soft Whitening là sản phẩm nổi ti�
                 'tag' => 'Chăm sóc da',
                 
             ],
+            [
+                'id' => 10,
+                'brand_id' => 1,
+                'product_category_id' => 1,
+                'name' => 'Serum ốc sên trị mụn',
+                'description' => 'ới thành phần chính là 880.000ppm tinh chất Ốc sên và 10.000ppm hợp chất độc quyền TRUECICA của Some By Mi, tinh chất mang đến nhiều khả năng vượt trội cho làn da: Phục hồi da, làm sáng và mờ vết thâm',
+                'content' => null,
+                'price' => 254.000,
+                'qty' => 20,
+                'discount' => 5,
+                'weight' => 50,
+                'sku' => '00134',
+                'featured' => true,
+                'tag' => 'Serum và sản phẩm đặc trị',
+            ],
+            [
+                'id' => 11,
+                'brand_id' => 1,
+                'product_category_id' => 1,
+                'name' => 'Toner Eveline',
+                'description' => 'Theo làn sóng dưỡng da bằng "acid" nổi rần rần hiện tại (và chắc chắn là trong thời gian dài tới) thì toner acid đang là 1 trong những sản phẩm được nhiều người để ý nhất vì tác dụng dịu nhẹ cũng như ko gây kích ứng da quá nhiều như peel hay serum các bác nhỉ.  Em toner acid mới nhà Eveline đợt này đáp ứng đủ nhu cầu cho 1 em toner acid giá phải chăng, lại còn được các BB Nga review là bản dupe của toner Pixi (t chưa dùng Pixi nên ko chắc có đúng ko nhưng 5 người thì 3 trog số beauty blogger so sánh 2 em này với nhau rồi',
+                'content' => null,
+                'price' => 155.000,
+                'qty' => 20,
+                'discount' => 5,
+                'weight' => 400,
+                'sku' => '00145',
+                'featured' => true,
+                'tag' => 'Chăm sóc da',
+            ],
+            [
+                'id' => 12,
+                'brand_id' => 1,
+                'product_category_id' => 1,
+                'name' => 'Kem dưỡng ẩm Eveline',
+                'description' => 'Kem dưỡng trắng da Eveline Extra Soft Whitening làm trắng da và cân bằng độ ẩm cho da.
+Kem dưỡng trắng da Eveline Extra Soft Whitening là sản phẩm nổi tiếng của hãng mỹ phẩm danh tiếng Eveline đến từ Ba Lan, có thể dùng cho da mặt và toàn thân với độ thân thiện cực cao có thể dùng được cho mọi loại da.',
+                'content' => null,
+                'price' => 99.000,
+                'qty' => 20,
+                'discount' => 5,
+                'weight' => 50,
+                'sku' => '00123',
+                'featured' => true,
+                'tag' => 'Chăm sóc da',
+                
+            ],
         ]);
 
         DB::table('product_images')->insert([

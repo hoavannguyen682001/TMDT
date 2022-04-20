@@ -9,9 +9,9 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_details';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'order_details';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function order(){
         return $this->belongsTo(Order::class, 'order_id','id');

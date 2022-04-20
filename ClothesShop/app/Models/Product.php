@@ -9,9 +9,9 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $table = 'products';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'products';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function brand(){
         return $this->belongsTo(Brand::class, 'brand_id','id');

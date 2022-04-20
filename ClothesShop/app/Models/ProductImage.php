@@ -9,9 +9,9 @@ class ProductImage extends Model
 {
     use HasFactory;
 
-    protected $table = 'product_images';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'product_images';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function products(){
         return $this->belongsTo(Product::class, 'product_id','id');

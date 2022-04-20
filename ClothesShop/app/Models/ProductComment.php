@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ProductComment extends Model
 {
     use HasFactory;
-    protected $table = 'product_comments';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'product_comments';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function products(){
         return $this->belongsTo(Product::class, 'product_id','id');

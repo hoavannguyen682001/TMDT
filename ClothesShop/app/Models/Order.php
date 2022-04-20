@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $table = 'orders';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'orders';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function orderDetails(){
         return $this->hasMany(OrderDetail::class, 'order_id','id');

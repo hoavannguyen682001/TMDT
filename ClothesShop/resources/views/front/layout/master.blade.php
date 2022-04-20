@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -78,19 +77,21 @@
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="front/img/logo.png" width="150" alt="" height="60">
+                                <img src="front/img/logo.png" width="130" alt="" height="40">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <button type="button" class="category-btn">Danh mục</button>
-                            <div class="input-group">
-                                <input type="text" placeholder="Bạn muốn tìm?">
-                                <button type="button"><i class="ti-search"></i></button>
+                        <form action="shop">
+                            <div class="advanced-search">
+                                <button type="button" class="category-btn">Danh mục</button>
+                                <div class="input-group">
+                                    <input name="search" type="text" value="{{ request('search') }}" placeholder="Bạn muốn tìm?">
+                                    <button type="submit"><i class="ti-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
 
                     <div class="col-lg-3 col-md-3 text-right">
@@ -148,7 +149,7 @@
                                 </div>
                             </li>
                             <li>
-                                <li class="cart-price">$128.00</li>
+                            <li class="cart-price">$128.00</li>
                             </li>
                         </ul>
                     </div>
@@ -207,8 +208,8 @@
     <!--Header section end-->
 
 
-@yield('body')
-    
+    @yield('body')
+
     <!-- Partner Logo Section Begin -->
     <div class="partner-logo">
         <div class="container">

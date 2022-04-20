@@ -9,9 +9,9 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $table = 'blogs';
-    protected $primarykey = 'id';
-    protected $guarded = [];
+    // protected $table = 'blogs';
+    // protected $primarykey = 'id';
+    // protected $guarded = [];
 
     public function blogComments(){
         return $this->hasMany(BlogComment::class, 'blog_id','id');
