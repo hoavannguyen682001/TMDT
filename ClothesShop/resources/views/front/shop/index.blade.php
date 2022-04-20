@@ -23,126 +23,117 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
-                <div class="filter-widget">
-                    <h4 class="fw-title">Danh mục</h4>
-                    <ul class="filter-catagories">
-                        <li><a href="#">Chăm sóc da</a></li>
-                        <li><a href="#">Serum và sản phẩm đặc trị</a></li>
-                        <li><a href="#">Trang điểm</a></li>
-                    </ul>
-                </div>
-                <div class="filter-widget">
-                    <h4 class="fw-title">Nhãn hàng</h4>
-                    <div class="fw-brand-check">
-                        <div class="bc-item">
-                            <label for="bc-calvin">
-                                L'Oreal
-                                <input type="checkbox" id="bc-calvin">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-diesel">
-                                Innissfee
-                                <input type="checkbox" id="bc-diesel">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-polo">
-                                Eveline
-                                <input type="checkbox" id="bc-polo">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-tommy">
-                                Byphasse
-                                <input type="checkbox" id="bc-tommy">
-                                <span class="checkmark"></span>
-                            </label>
+                <form action="">
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Danh mục</h4>
+                        <ul class="filter-catagories">
+                            @foreach($categories as $category)
+                            <li><a href="shop/{{ $category->name}}">{{$category->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Nhãn hàng</h4>
+                        <div class="fw-brand-check">
+                            @foreach($brands as $brand)
+                                <div class="bc-item">
+                                    <label for="bc-{{ $brand->id }}">
+                                        {{ $brand->name}}
+                                        <input type="checkbox" 
+                                        {{ (request("brand")[$brand->id] ?? '') == 'on' ? 'checked' : ''}} 
+                                            id = "bc-{{ $brand->id }}" 
+                                            name = "brand[{{ $brand->id }}]" 
+                                            onchange = "this.form.submit();">     
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="filter-widget">
-                    <h4 class="fw-title">Giá </h4>
-                    <div class="filter-range-wrap">
-                        <div class="range-slider">
-                            <div class="price-input">
-                                <input type="text" id="minamount">
-                                <input type="text" id="maxamount">
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Giá </h4>
+                        <div class="filter-range-wrap">
+                            <div class="range-slider">
+                                <div class="price-input">
+                                    <input type="text" id="minamount" name ="price_min">
+                                    <input type="text" id="maxamount" name ="price_max">
+                                </div>
+                            </div>
+                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" 
+                            data-min="1" data-max="9999"
+                            data-min-value="{{ str_replace('$', '', request('price_min')) }}" 
+                            data-max-value="{{ str_replace('$', '', request('price_max')) }}">
+                                <div class="price-range ui-slider ui-corner-all ui-widget-header"></div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                            </div>
+                            
+                        </div>
+                        <button type="submit" class="filter-btn">Lọc</button>
+                    </div>
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Màu sắc</h4>
+                        <div class="fw-color-choose">
+                            <div class="cs-item">
+                                <input type="radio" id="cs-black">
+                                <label class="cs-black" for="cs-black">black</label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" id="cs-violet">
+                                <label class="cs-violet" for="cs-violet">violet</label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" id="cs-blue">
+                                <label class="cs-blue" for="cs-blue">blue</label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" id="cs-yellow">
+                                <label class="cs-yellow" for="cs-yellow">yellow</Label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" id="cs-red">
+                                <label class="cs-red" for="cs-red">red</label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" id="cs-green">
+                                <label class="cs-green" for="cs-green">green </label>
                             </div>
                         </div>
-                        <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="33" data-max="98">
-                            <div class="price-range ui-slider ui-corner-all ui-widget-header"></div>
-                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                    </div>
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Kích thước</h4>
+                        <div class="fw-size-choose">
+                            <div class="sc-item">
+                                <input type="radio" id="s-size">
+                                <label for="s-size">Lớn</Label>
+                            </div>
+                            <div class="sc-item">
+                                <input type="radio" id="m-size">
+                                <label for="m-size">Nhỏ</label>
+                            </div>
+                            <div class="sc-item">
+                                <input type="radio" id="l-size">
+                                <label for="l-size">Gói</label>
+                            </div>
+                            <!-- <div class="sc-item">
+                                    <input type="radio" id="xs-size">
+                                    <Label for="xs-size">xs</label>
+                                </div> -->
                         </div>
                     </div>
-                    <a href="#" class="filter-btn">Lọc</a>
-                </div>
-                <div class="filter-widget">
-                    <h4 class="fw-title">Màu sắc</h4>
-                    <div class="fw-color-choose">
-                        <div class="cs-item">
-                            <input type="radio" id="cs-black">
-                            <label class="cs-black" for="cs-black">black</label>
-                        </div>
-                        <div class="cs-item">
-                            <input type="radio" id="cs-violet">
-                            <label class="cs-violet" for="cs-violet">violet</label>
-                        </div>
-                        <div class="cs-item">
-                            <input type="radio" id="cs-blue">
-                            <label class="cs-blue" for="cs-blue">blue</label>
-                        </div>
-                        <div class="cs-item">
-                            <input type="radio" id="cs-yellow">
-                            <label class="cs-yellow" for="cs-yellow">yellow</Label>
-                        </div>
-                        <div class="cs-item">
-                            <input type="radio" id="cs-red">
-                            <label class="cs-red" for="cs-red">red</label>
-                        </div>
-                        <div class="cs-item">
-                            <input type="radio" id="cs-green">
-                            <label class="cs-green" for="cs-green">green </label>
+                    <div class="filter-widget">
+                        <h4 class=" fw-title">Gợi ý</h4>
+                        <div class="fw-tags">
+                            <a href="#">Rửa mặt</a>
+                            <a href="#">Tẩy trang</a>
+                            <a href="#">Son</a>
+                            <a href="#">Kẻ mắt</a>
+                            <a href="#">Nước hoa</a>
+                            <a href="#">Dưỡng thể</a>
+                            <a href="#">Toner</a>
                         </div>
                     </div>
-                </div>
-                <div class="filter-widget">
-                    <h4 class="fw-title">Kích thước</h4>
-                    <div class="fw-size-choose">
-                        <div class="sc-item">
-                            <input type="radio" id="s-size">
-                            <label for="s-size">Lớn</Label>
-                        </div>
-                        <div class="sc-item">
-                            <input type="radio" id="m-size">
-                            <label for="m-size">Nhỏ</label>
-                        </div>
-                        <div class="sc-item">
-                            <input type="radio" id="l-size">
-                            <label for="l-size">Gói</label>
-                        </div>
-                        <!-- <div class="sc-item">
-                                <input type="radio" id="xs-size">
-                                <Label for="xs-size">xs</label>
-                            </div> -->
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <h4 class=" fw-title">Gợi ý</h4>
-                    <div class="fw-tags">
-                        <a href="#">Rửa mặt</a>
-                        <a href="#">Tẩy trang</a>
-                        <a href="#">Son</a>
-                        <a href="#">Kẻ mắt</a>
-                        <a href="#">Nước hoa</a>
-                        <a href="#">Dưỡng thể</a>
-                        <a href="#">Toner</a>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="col-lg-9 order-1 order-lg-2">
                 <div class="product-show-option">

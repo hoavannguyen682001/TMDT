@@ -21,6 +21,8 @@ Route::prefix('shop')->group(function(){
 
     Route::get('/',[Front\ShopController::class,'index']);
     Route::get('/cart',[Front\CartController::class,'cart']);
+
+    Route::get('/{categoryName}',[Front\ShopController::class, 'category']);
 });
 
 Route::get('/blog',[Front\BlogController::class,'index']);
