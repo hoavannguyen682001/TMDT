@@ -20,8 +20,6 @@ Route::prefix('shop')->group(function(){
     Route::get('/product/{id}',[Front\ShopController::class,'show']);
 
     Route::get('/',[Front\ShopController::class,'index']);
-    Route::get('/cart',[Front\CartController::class,'cart']);
-
     Route::get('/{categoryName}',[Front\ShopController::class, 'category']);
 });
 
@@ -30,3 +28,8 @@ Route::get('/blog/blogdetail/{id}',[Front\BlogController::class,'blogdetail']);
 Route::get('/contact',[Front\ContactController::class,'contact']);
 Route::get('/login',[Front\LoginController::class,'login']);
 Route::get('/checkout/index',[Front\CheckOutController::class,'index']);
+
+
+Route::prefix('cart')->group(function(){
+    Route::get('add/{id}', [Front\CartController::class, 'add']);
+});

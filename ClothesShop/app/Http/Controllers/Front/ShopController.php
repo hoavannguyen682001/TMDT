@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     public function show($id){
+        //get category,brands
+        $categories = ProductCategory::all();
+        $brands = Brand::all();
 
         $product = Product::findOrFail($id);
 
@@ -29,7 +32,7 @@ class ShopController extends Controller
             ->get();
 
 
-        return view('front.shop.show',compact('product','avg_rating','colors','size','relatedProducts'));
+        return view('front.shop.show',compact('product','avg_rating','colors','size','relatedProducts','brands','categories'));
     }
 
     public function index(Request $request){
@@ -109,6 +112,14 @@ class ShopController extends Controller
         $priceMin = str_replace('$', '', $priceMin);
         $priceMax = str_replace('$', '', $priceMax);
         $products = ($priceMin != null && $priceMax != null) ? $products->whereBetween('price', [$priceMin, $priceMax]):$products;
+
+         //Color
+        $color =  $request->color;
+        $products = $color != null
+                ? $products->whereHas('productDetails', function ($query) use ($color) {
+                return $query->where('color', $color)->where('qty', '>', 0);
+        })
+        : $products;
 
         return $products;
     }

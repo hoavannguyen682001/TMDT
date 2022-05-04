@@ -96,34 +96,7 @@
                 </div>
                 <div class="product-slider owl-carousel product1">
                     @foreach($product2 as $product2)
-                    <div class="product-item item {{$product2->tag}}">
-                        <div class="pi-pic">
-                            <img src="front/img/products/{{$product2->productImages[0]->path}}" alt="">
-                            <div class="sale">Giảm giá</div>
-                            <div class="icon">
-                                <i class="icon_heart alt"></i>
-                            </div>
-                            <ul>
-                                <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="./shop/product/{{$product2->id}}">+ Xem nhanh</a></li>
-                                <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="pi-text">
-                            <div class="catagory-name">{{$product2->tag}}</div>
-                            <a href="">
-                                <h5>{{$product2->name}}</h5>
-                            </a>
-                            <div class="product-price">
-                                @if($product2->discount != null)
-                                ${{ $product2->discount }}
-                                <span>${{ $product2->price }}</span>
-                                @else
-                                ${{ $product2->price }}
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+                        @include('front.components.product-item',['product' => $product2])
                     @endforeach
                 </div>
             </div>
@@ -185,34 +158,7 @@
                 </div>
                 <div class="product-slider owl-carousel product1">
                     @foreach($product1 as $product1)
-                    <div class="product-item item {{$product1->tag}}">
-                        <div class="pi-pic">
-                            <img src="front/img/products/{{$product1->productImages[0]->path}}" alt="">
-                            <div class="sale">Giảm giá</div>
-                            <div class="icon">
-                                <i class="icon_heart alt"></i>
-                            </div>
-                            <ul>
-                                <li class="w-icon active"><a href=""><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="./shop/product/{{$product1->id}}">+ Xem nhanh</a></li>
-                                <li class="w-icon"><a href=""><i class="fa fa-randon"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="pi-text">
-                            <div class="catagory-name">{{$product1->tag}}</div>
-                            <a href="">
-                                <h5>{{$product1->name}}</h5>
-                            </a>
-                            <div class="product-price">
-                                @if($product2->discount != null)
-                                ${{ $product2->discount }}
-                                <span>${{ $product2->price }}</span>
-                                @else
-                                ${{ $product2->price }}
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+                        @include('front.components.product-item',['product' => $product1])
                     @endforeach
                 </div>
             </div>
